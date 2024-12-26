@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom</title>
+    <style> 
+        .bg-black{
+            background-color: black;
+            color: aliceblue;
+
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div >
+        <h1 id="title"class="heading">dom learning</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quia eos adipisci cumque nisi amet dolorem labore accusamus illum id dolore cupiditate a nulla libero, ullam numquam similique earum sunt!</p>
+    </div>
+    
+</body>
+<script>
+    document.getElementById('title').id  // return title
+    document.getElementById('title').class // return undefined
+    document.getElementById('title').className // return heading
+    document.getElementById('title').getAttribute('id') // return id
+    document.getElementById('title').setAttribute('class', 'test heading') // overwrite the class
+    title =document.getElementById('title').id  
+    title.style.backgroundColor ='green ' // styling
+
+    document.querySelector('h1') // return first h1 tag
+    document.querySelector('#title')
+    document.querySelector('.heading')
+    document.querySelector('input[type="password"]')
+    document.querySelector('h1')
+    document.querySelector('h1')
+    const head =document.querySelectorAll('h1') // return all h1 tag its type is nodelist
+    head.style.color ='green' // gives error
+    head.style[0].color ='green' // correct
+
+
+    const list = document.getElementByClassName('list-item').id  // return in htmlCollection type have to convert it into array to use for each
+    Array.from(list) // converts into array
+
+
+
+
+
+</script>
+</html>
